@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check server.js)",
+      "Bash(node --check routes/admin.js)",
+      "Bash(node --check routes/userRoutes.js)",
+      "Bash(node --check routes/orderRoutes.js)",
+      "Bash(node --check routes/sellerRoutes.js)",
+      "Bash(npm run:*)",
+      "Bash(docker --version)",
+      "Bash(docker compose:*)",
+      "Bash(curl -s http://localhost/api/products)",
+      "Bash(curl -s http://localhost/)",
+      "Read(//Users/mayank/Downloads/**)",
+      "Bash(zip -r EcommerceWeb.zip EcommerceWeb/ --exclude \"EcommerceWeb/node_modules/*\" --exclude \"EcommerceWeb/.git/*\" --exclude \"EcommerceWeb/dist/*\")"
+    ]
+  }
+}

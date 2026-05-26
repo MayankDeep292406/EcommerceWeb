@@ -1,66 +1,68 @@
-import React from 'react'
-import ShopingCart from "./ShopingCart";
+// src/pages/Final.jsx
 
-// export default function Final() {
-//     const ProductWithDiscount = ShopingCart.map(items =>{
-//         const discountedPrice = items.price -(items.price * items.discount)/100;
-//         console.log(`${items.name} - Original: ₹${items.price}, Discounted: ₹${discountedPrice}`);
-//    });
-//   return 
-  
+import React from "react";
 
-// }
-// export default function Final() {
-// const instockOnly = ShopingCart.map(item => item.inStock)
-// console.log(instockOnly);
-
-// return(
-//     <div>
-//       {/* {instockOnly.map(item => (
-//         <p key={item.id}>
-//           {item.name} and ₹{item.price} and {item.inStock ? "In Stock" : "Out of Stock"}
-//         </p>
-//       ))} */}
-//     </div>
-// )
-// }
-
-
-// function Final() {
-//     const available = ShopingCart.filter(item=> item.inStock);
-//     console.log(available)
-//   return (
-//     <div>
+function Final() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-black text-white">
       
-//     </div>
-//   )
-// }
+      {/* HEADER */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <h1 className="text-5xl font-black">
+          Luxury Furniture Store
+        </h1>
 
-// export default Final;
+        <p className="text-gray-300 mt-3 text-lg">
+          Modern & Premium Furniture Collection
+        </p>
+      </div>
 
-// export default function Final(){
-//     const Total = ShopingCart.reduce((total, items)=>{
-//         const discountPrice = items.price -(items.price * items.discount)/100;
-//         return total + discountPrice;
-//     },0);
-//     console.log(Total)
-// }
+      {/* CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* CARD */}
+          <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500">
+            
+            <img
+              src="https://angiehomes.co/cdn/shop/products/AVA-CHAIR-ANGIE-HOMES-1618911183.jpg?v=1618911185&width=1090"
+              alt="Chair"
+              className="w-full h-72 object-cover"
+            />
 
-// export default function Products(){
-//     const filtter = ShopingCart.filter(item =>(item.price>1500))
-//     console.log(filtter);
-// }
+            <div className="p-5">
+              <p className="text-orange-400 text-sm uppercase">
+                Chair
+              </p>
 
-// export default function discount(){
-//     const discounted = ShopingCart.reduce((total, item) =>{
-//         const value = (item.price * item.discount)/100;
-//         return total + value
-//     },0)
-//     console.log(discounted)
+              <h2 className="text-2xl font-bold mt-2">
+                Wooden Chair
+              </h2>
 
-// }
+              <p className="text-gray-300 mt-3 text-sm">
+                Premium wooden chair with modern luxury design.
+              </p>
 
-export default function name(){
-    const list = ShopingCart.map(item=>(item.name));
-    console.log(list);
+              <div className="flex items-center gap-3 mt-5">
+                <span className="text-3xl font-black">
+                  ₹1999
+                </span>
+
+                <span className="text-gray-400 line-through">
+                  ₹2499
+                </span>
+              </div>
+
+              <button className="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-2xl font-bold transition">
+                View Product
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default Final;

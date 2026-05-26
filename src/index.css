@@ -1,49 +1,20 @@
 /* ✅ TailwindCSS Base Setup */
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ✅ Global Styles */
-:root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light;
-  background-color: #ffffff;
-  color: #1a1a1a;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  50% {
+    transform: translateY(-14px);
+  }
 
-/* ✅ Body Reset */
-body {
-  @apply bg-white text-gray-900 antialiased m-0 min-h-screen;
-}
+  100% {
+    transform: translateY(0px);
 
-/* ✅ Headings */
-h1, h2, h3 {
-  @apply font-bold text-gray-800;
-}
-
-/* ✅ Links */
-a {
-  @apply text-blue-600 hover:text-blue-800 font-medium transition;
-}
-
-/* ✅ Buttons */
-button {
-  @apply px-4 py-2 rounded bg-blue-600 text-white font-medium hover:bg-blue-700 transition;
-}
-
-/* ✅ Custom Scrollbar (optional) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #bbb;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #888;
+  }
 }
